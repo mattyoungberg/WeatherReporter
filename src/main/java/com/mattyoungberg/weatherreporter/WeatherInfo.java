@@ -8,7 +8,6 @@ public class WeatherInfo {
 
     private final DateTimeFormatter DTF = DateTimeFormatter.ofPattern("h:mma");
 
-    private final Unit unit;
     private final String location;
     private final String description;
     private final Temperature temperature;
@@ -21,7 +20,6 @@ public class WeatherInfo {
 
 
     public WeatherInfo(Unit unit, String location, String description, float temperature, float feelsLike, float high, float low, float windSpeed, long sunrise, long sunset, long timeOffSet) {
-        this.unit = unit;
         this.location = location;
         this.description = description;
         this.temperature = new Temperature(temperature, unit);
