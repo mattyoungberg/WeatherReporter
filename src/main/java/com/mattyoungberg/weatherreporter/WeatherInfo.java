@@ -33,10 +33,6 @@ public class WeatherInfo {
         this.sunset = LocalDateTime.ofEpochSecond(sunset + timeOffSet, 0, ZoneOffset.ofHours(0));
     }
 
-    public String getUnit() {
-        return unit.name();
-    }
-
     public String getLocation() {
         return location;
     }
