@@ -13,7 +13,7 @@ public class App {
         Config config = new Config();
 
         // Figure out where the machine is requesting from and get corresponding weather info
-        Coordinates coordinates = new Coordinates(config);
+        Coordinates coordinates = CoordinatesRetriever.getLocalCoordinates(config, HTTP_CLIENT);
         WeatherInfo weatherInfo = WeatherInfoRetriever.getWeatherInfo(coordinates, config, HTTP_CLIENT);
 
         // Print weather data to console
