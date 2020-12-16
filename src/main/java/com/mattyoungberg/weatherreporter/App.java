@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // Load config
-        Config config = new Config();
+        Config config = ConfigLoader.getConfig();
 
         // Figure out where the machine is requesting from and get corresponding weather info
         Coordinates coordinates = CoordinatesRetriever.getLocalCoordinates(config, HTTP_CLIENT);
